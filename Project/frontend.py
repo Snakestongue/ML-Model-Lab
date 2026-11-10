@@ -28,3 +28,18 @@ if file is not None:
             st.write(f"Columns: {c}")
     except Exception:
         st.error("Unable to read this file. Try again later!")
+
+with st.sidebar:
+    st.title("Machine Learning Lab")
+    st.divider() #horz line
+    st.subheader("Navigation")
+
+    page = st.radio(
+        "Go to",
+        ["Home", "Upload Dataset", "Data Analysis", "Model Training"],
+        label_visibility="collapsed"
+    )
+
+    st.divider()
+
+    st.caption("v0.0")
